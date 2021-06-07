@@ -23,7 +23,7 @@ function App() {
   //api call
   const handleClick = async () => {
     //Azure Functionsをcall（ローカルではCORS対応必要：package.jsonにproxyする）
-    const result = await axios.get(`/api/getData?name=${state.name}`);
+    const result = await axios.get(`/api/getMessage?name=${state.name}`);
     setStete({ ...state, message: result.data })
   }
 
